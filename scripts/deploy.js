@@ -7,7 +7,7 @@ async  function main(){
   console.log("Deploying the Contract......")
   const simpleStorage  = await SimpleStorageFactory.deploy()
   await simpleStorage.waitForDeployment()
-  console.log(`Deployed contract to -> ${simpleStorage.target}`)
+  console.log(`Deployed contract to ${simpleStorage.target}`)
 
   const currentValue = await simpleStorage.retrieve()
   console.log(`current value: ${currentValue}`)
